@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 import { IProduct } from './product';
 
 @Component({
@@ -97,5 +97,9 @@ export class ProductListComponent implements OnInit {
 
   ngOnInit(): void {
     console.log('In Oninit');
+  }
+
+  onRatingClicked(message: string): void {
+    this.pageTitle = `Product List ${message}`;
   }
 }
